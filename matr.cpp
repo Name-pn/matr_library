@@ -8,7 +8,7 @@ matr_operations::matr_operations(void) {
 matr_operations::matr_operations(long long m) {
 	try {
 		if (m < 1)
-			throw std::exception("Ошибка данных. Попытка определения некорректного размера матрицы\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ СЂР°Р·РјРµСЂР° РјР°С‚СЂРёС†С‹\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -25,7 +25,7 @@ matr_operations::matr_operations(long long m) {
 matr_operations::matr_operations(long long m, long long n) {
 	try {
 		if (m < 1 || n < 1)
-			throw std::exception("Ошибка данных. Попытка определения некорректного размера матрицы\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ СЂР°Р·РјРµСЂР° РјР°С‚СЂРёС†С‹\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -46,7 +46,7 @@ inline long long matr_operations::lines(void) {
 inline void matr_operations::set_lines(long long m) {
 	try {
 		if (m < 1)
-			throw std::exception("Ошибка данных. Попытка определения некорректного размера матрицы\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ СЂР°Р·РјРµСЂР° РјР°С‚СЂРёС†С‹\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -67,7 +67,7 @@ inline long long matr_operations::columns(void) {
 inline void matr_operations::set_columns(long long n) {
 	try {
 		if (n < 1)
-			throw std::exception("Ошибка данных. Попытка определения некорректного размера матрицы\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ СЂР°Р·РјРµСЂР° РјР°С‚СЂРёС†С‹\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -82,7 +82,7 @@ inline void matr_operations::set_columns(long long n) {
 inline long double matr_operations::at(long long i, long long j) {
 	try {
 		if (i < 0 || i > this->m-1 || j < 0 || j > this->n-1)
-			throw std::exception("Логическая ошибка. Попытка обращения по некорректному индексу\n");
+			throw std::exception("Р›РѕРіРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР°. РџРѕРїС‹С‚РєР° РѕР±СЂР°С‰РµРЅРёСЏ РїРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРјСѓ РёРЅРґРµРєСЃСѓ\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -104,7 +104,7 @@ matr_operations matr_operations::transpose(void) {
 std::vector <long double> & matr_operations::operator [] (size_t i) {
 	try {
 		if (i < 0 || i > this->m - 1)
-			throw std::exception("Логическая ошибка. Попытка обращения по некорректному индексу\n");
+			throw std::exception("Р›РѕРіРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР°. РџРѕРїС‹С‚РєР° РѕР±СЂР°С‰РµРЅРёСЏ РїРѕ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРјСѓ РёРЅРґРµРєСЃСѓ\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -142,7 +142,7 @@ std::ostream& operator << (std::ostream& out, matr_operations a) {
 matr_operations operator + (matr_operations a, matr_operations& b) {
 	try {
 		if (a.m != b.m || a.n != b.n || a.n == 0)
-			throw std::exception("Логическая ошибка. Не корректные размерности операндов матриц");
+			throw std::exception("Р›РѕРіРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР°. РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё РѕРїРµСЂР°РЅРґРѕРІ РјР°С‚СЂРёС†");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -159,7 +159,7 @@ matr_operations operator + (matr_operations a, matr_operations& b) {
 matr_operations operator * (matr_operations a, long double k) {
 	try {
 		if (a.n == 0 || a.m == 0)
-			throw std::exception("Логическая ошибка. Не корректные размерности операндов матриц");
+			throw std::exception("Р›РѕРіРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР°. РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё РѕРїРµСЂР°РЅРґРѕРІ РјР°С‚СЂРёС†");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -192,7 +192,7 @@ static long double get_el(matr_operations a, matr_operations b, long long mi, lo
 
 matr_operations operator * (matr_operations a, matr_operations b) {
 	if (a.columns() != b.lines())
-		throw std::exception("Ошибка вводимых данных. Размерности матриц не допускают их перемножения");
+		throw std::exception("РћС€РёР±РєР° РІРІРѕРґРёРјС‹С… РґР°РЅРЅС‹С…. Р Р°Р·РјРµСЂРЅРѕСЃС‚Рё РјР°С‚СЂРёС† РЅРµ РґРѕРїСѓСЃРєР°СЋС‚ РёС… РїРµСЂРµРјРЅРѕР¶РµРЅРёСЏ");
 	matr_operations c(a.lines(), b.columns());
 	for (size_t i = 0; i < b.columns(); i++) {
 		for (size_t j = 0; j < a.lines(); j++) {
@@ -279,7 +279,7 @@ long long prepare_column(matr_operations &a, size_t i) {
 	for (size_t j = i + 1; j < a.lines(); j++) {
 		if (a[j][i] != 0) {
 			lm = lscm / a[j][i];
-			//Исключение
+			//РСЃРєР»СЋС‡РµРЅРёРµ
 			if (lm != 0) {
 				for (size_t k = i; k < a.columns(); k++) {
 					a[j][k] *= lm;
@@ -331,17 +331,21 @@ long long matr_operations::try_triangular_matr(void) {
 
 long double matr_operations::determinant(void) {
 	if (n != m)
-		throw std::exception("Ошибка данных. Попытка нахождения опеределителя не квадратной матрицы");
+		throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РѕРїРµСЂРµРґРµР»РёС‚РµР»СЏ РЅРµ РєРІР°РґСЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹");
 	if (n < 1 || m < 1)
-		throw std::exception("Ошибка данных. Попытка нахождения опеределителя матрицы не корректной размерности");
-	long double det = this->try_triangular_matr();
+		throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РѕРїРµСЂРµРґРµР»РёС‚РµР»СЏ РјР°С‚СЂРёС†С‹ РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё");
+	long double k = this->try_triangular_matr();
+	long double det = 1;
+	for (size_t i = 0; i < (*this).n; i++) {
+		det *= (*this)[i][i];
+	}
  	return(det);
 }
 
 matr_operations matr_operations::matr_minor(long long i, long long j) {
 	try {
 		if (m != n || n < 2 || m < 2)
-			throw std::exception("Ошибка данных. Попытка нахождения минорной матрицы при не корректной размерности исходной матрицы\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РјРёРЅРѕСЂРЅРѕР№ РјР°С‚СЂРёС†С‹ РїСЂРё РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё РёСЃС…РѕРґРЅРѕР№ РјР°С‚СЂРёС†С‹\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -370,7 +374,7 @@ matr_operations matr_operations::matr_minor(long long i, long long j) {
 long double matr_operations::minor(long long i, long long j) {
 	try {
 		if (m != n || n < 2 || m < 2)
-			throw std::exception("Ошибка данных. Попытка нахождения минора матрицы не корректной размерности\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РјРёРЅРѕСЂР° РјР°С‚СЂРёС†С‹ РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
@@ -386,9 +390,9 @@ matr_operations matr_operations::inverse_matr(void) {
 	try {
 		det = this->determinant();
 		if (det == 0)
-			throw std::exception("Логическая ошибка. Попытка получения обратной матрицы при определителе равном нулю\n");
+			throw std::exception("Р›РѕРіРёС‡РµСЃРєР°СЏ РѕС€РёР±РєР°. РџРѕРїС‹С‚РєР° РїРѕР»СѓС‡РµРЅРёСЏ РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹ РїСЂРё РѕРїСЂРµРґРµР»РёС‚РµР»Рµ СЂР°РІРЅРѕРј РЅСѓР»СЋ\n");
 		if (n != m || m < 1 || n < 1)
-			throw std::exception("Ошибка данных. Попытка нахождения опеределителя матрицы не корректной размерности\n");
+			throw std::exception("РћС€РёР±РєР° РґР°РЅРЅС‹С…. РџРѕРїС‹С‚РєР° РЅР°С…РѕР¶РґРµРЅРёСЏ РѕРїРµСЂРµРґРµР»РёС‚РµР»СЏ РјР°С‚СЂРёС†С‹ РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕР№ СЂР°Р·РјРµСЂРЅРѕСЃС‚Рё\n");
 	}
 	catch (std::exception a) {
 		std::cout << a.what();
