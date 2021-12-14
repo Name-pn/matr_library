@@ -12,29 +12,29 @@ private:
 	std::vector <std::vector<long double>> mas;
 
 public:
-	//Конструкторы
+	//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹
 	matr_operations(void);
 	matr_operations(long long m);
 	matr_operations(long long m, long long n);
 
-	//Работа с полями
+	//Р Р°Р±РѕС‚Р° СЃ РїРѕР»СЏРјРё
 	inline long long lines(void);
 	inline void set_lines(long long m);
 	inline long long columns(void);
 	inline void set_columns(long long n);
 	inline long double at(long long i, long long j);
 
-	//Операции с матрицей
-	matr_operations transpose(void); //Транспонирование
-	long long try_triangular_matr(void); //Приведения матрицы к треугольному виду и получение использованного множителя
-	long double determinant(void); //Нахождение определителя
-	matr_operations inverse_matr(void); //Получение обратной матрицы
+	//РћРїРµСЂР°С†РёРё СЃ РјР°С‚СЂРёС†РµР№
+	matr_operations transpose(void); //РўСЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРёРµ
+	long long try_triangular_matr(void); //РџСЂРёРІРµРґРµРЅРёСЏ РјР°С‚СЂРёС†С‹ Рє С‚СЂРµСѓРіРѕР»СЊРЅРѕРјСѓ РІРёРґСѓ Рё РїРѕР»СѓС‡РµРЅРёРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅРѕРіРѕ РјРЅРѕР¶РёС‚РµР»СЏ
+	long double determinant(void); //РќР°С…РѕР¶РґРµРЅРёРµ РѕРїСЂРµРґРµР»РёС‚РµР»СЏ
+	matr_operations inverse_matr(void); //РџРѕР»СѓС‡РµРЅРёРµ РѕР±СЂР°С‚РЅРѕР№ РјР°С‚СЂРёС†С‹
 
-	//Дополнительные операции
-	matr_operations matr_minor(long long i, long long j); //Получение "минорной" матрицы
-	long double minor(long long i, long long j); //Получение минора
+	//Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РѕРїРµСЂР°С†РёРё
+	matr_operations matr_minor(long long i, long long j); //РџРѕР»СѓС‡РµРЅРёРµ "РјРёРЅРѕСЂРЅРѕР№" РјР°С‚СЂРёС†С‹
+	long double minor(long long i, long long j); //РџРѕР»СѓС‡РµРЅРёРµ РјРёРЅРѕСЂР°
 
-	//Перегруженный операторы
+	//РџРµСЂРµРіСЂСѓР¶РµРЅРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂС‹
 	std::vector <long double> &operator [] (size_t i);
 	friend std::istream& operator >> (std::istream& in, matr_operations& a);
 	friend std::ostream& operator << (std::ostream& out, matr_operations a);
@@ -46,5 +46,5 @@ public:
 	
 };
 
-//Возводит матрицу start в степень n
+//Р’РѕР·РІРѕРґРёС‚ РјР°С‚СЂРёС†Сѓ start РІ СЃС‚РµРїРµРЅСЊ n
 matr_operations pow(matr_operations, int);
