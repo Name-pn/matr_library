@@ -5,6 +5,8 @@
  * \brief Заголовочный файл библиотеки
  */
 
+// Здесь был Володя
+
 #ifndef MATR_OPERATIONS
 #define MATR_OPERATIONS
 
