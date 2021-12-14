@@ -339,7 +339,7 @@ long double matr_operations::determinant(void) {
 	for (size_t i = 0; i < (*this).n; i++) {
 		det *= (*this)[i][i];
 	}
- 	return(det);
+ 	return(det*k);
 }
 
 matr_operations matr_operations::matr_minor(long long i, long long j) {
